@@ -40,15 +40,18 @@ function init(){
     menuBtn.onclick = function(e){
         let className = e.target.className === MENU_BTN ? CLOSE_BTN : MENU_BTN;
         e.target.className = className;
-        console.log(e.target.className);
+        // console.log(e.target.className);
 
         if(className !== MENU_BTN){
             // when drawer is closed
-            console.log("close");
+            // console.log("close");
+            menuBtn.firstElementChild.style.color = "#fff";
             menuBar.setAttribute("style", "right: 0");
         }else{
             // when drawer is opened
-            console.log("close");
+            // console.log("close");
+            resetGnb();
+            menuBtn.firstElementChild.style.color = "#333";
             menuBar.setAttribute("style", "right: -100%");
         }
     }
